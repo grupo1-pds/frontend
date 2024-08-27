@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import { Toaster } from "@/components/ui/sonner"
-import { Inter as FontSans } from "next/font/google"
-import { GeistSans } from 'geist/font/sans';
 import "./globals.css";
 import { SiteHeader } from "@/components/header/header";
 
@@ -16,11 +14,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={GeistSans.className}>
-        <SiteHeader/>
+    <html lang="en" className="scroll-smooth">
+      <body>
         {children}
-        </body>
+      </body>
         <Toaster />
     </html>
   );

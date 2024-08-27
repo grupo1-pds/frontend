@@ -10,7 +10,6 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
 import {
   Tabs,
   TabsContent,
@@ -80,14 +79,14 @@ const LoginPage = () => {
   }
 
   return (
-    <main className="w-screen h-screen flex justify-center items-center">
-      <Tabs defaultValue="login" className="w-[400px]">
+    <main className="w-screen h-screen flex justify-center items-center bg-[#f5f5f5]">
+      <Tabs defaultValue="login" className="w-[600px] bg-white rounded-lg p-12 border border-gray-200">
         <TabsList className="grid w-full grid-cols-2">
           <TabsTrigger value="login">Login</TabsTrigger>
           <TabsTrigger value="register">Cadastro</TabsTrigger>
         </TabsList>
         <TabsContent value="login">
-          <Card>
+          <Card className="shadow-none">
             <CardHeader>
               <CardTitle>Login</CardTitle>
               <CardDescription>
@@ -125,14 +124,14 @@ const LoginPage = () => {
                   />
                 </CardContent>
                 <CardFooter>
-                  <Button type="submit">Continuar</Button>
+                  <Button type="submit" className="bg-[#e48035] text-white w-full hover:bg-[#CD5C08]/90">Continuar</Button>
                 </CardFooter>
               </form>
             </Form>
           </Card>
         </TabsContent>
         <TabsContent value="register">
-          <Card>
+          <Card className="shadow-none">
             <CardHeader>
               <CardTitle>Cadastre-se</CardTitle>
               <CardDescription>
@@ -196,7 +195,7 @@ const LoginPage = () => {
                   />
                 </CardContent>
                 <CardFooter>
-                  <Button type="submit">Registrar`</Button>
+                  <Button type="submit" className="bg-[#e48035] text-white w-full hover:bg-[#CD5C08]/90">Registrar</Button>
                 </CardFooter>
               </form>
             </Form>

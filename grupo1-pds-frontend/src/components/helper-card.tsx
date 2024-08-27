@@ -1,40 +1,40 @@
 import React from 'react'
-import { Badge } from '@/components/ui/badge'
 import { Plus, Trash, FilePenLine} from 'lucide-react';
 
 import { Avatar, AvatarFallback, AvatarImage } from '@radix-ui/react-avatar'
 
-interface Notification {
-  type: "SMS" | "PHONE" | "BOTH"
-}
+import { HelperEditCard } from '@/app/dashboard/helper-info-card';
+import { Button } from './ui/button';
+import DeleteHelperAlert from '@/app/dashboard/delete-helper-alert';
 
 interface Helper {
   id: string
   name: string
   email: string
   avatarImage: string
-  notificationType: Notification
+  phoneNumber: string
+  sms: boolean
+  phone: boolean
+  description: string
 }
 const HelperCard = (
   { helper }: { helper: Helper }
 ) => {
 
   return (
-    <div className='mt-3'>
     <div className='flex p-3 border rounded-xl items-center justify-between'>
       <div className='flex gap-5 items-center'>
-      <Avatar className="w-12 h-12">
-        <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" className='rounded-xl' />
+      <Avatar className="w-8 h-8">
+        <AvatarImage src="https://ui.shadcn.com/avatars/01.png" alt="@shadcn" className='rounded-xl' />
         <AvatarFallback>CN</AvatarFallback>
       </Avatar>
       <h1 className='text-lg hover:cursor-pointer hover:underline'>{helper.name}</h1>
       </div>
       <div className='flex gap-1'>
-        <FilePenLine size={16} className='text-gray-900 hover:cursor-pointer hover:text-gray-700'/>
-        <Trash size={16} className='text-gray-900 hover:cursor-pointer hover:text-red-500' />
+        <HelperEditCard name={helper.name} phoneNumber={helper.phoneNumber} sms={helper.sms} phone={helper.phone} description={helper.description} />
+        <DeleteHelperAlert helperId={helper.id} helperName={helper.name} />
       </div>
     </div>
-  </div>
   )
 }
 

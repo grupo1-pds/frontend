@@ -11,17 +11,6 @@ import { ScrollArea } from "../ui/scroll-area"
 
 import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet"
 
-const mainNav = [
-  {
-    title: "Sobre nós",
-    href: "/",
-  },
-  {
-    title: "Serviços",
-    href: "",
-  },
-]
-
 const sidebarNav = [
   {
     title: "SafeElder",
@@ -90,20 +79,6 @@ export function MobileNav() {
           <span className="font-bold">ElderSafe</span>
         </MobileLink>
         <ScrollArea className="my-4 h-[calc(100vh-8rem)] pb-10 pl-6">
-          <div className="flex flex-col space-y-3">
-            {mainNav.map(
-              (item) =>
-                item.href && (
-                  <MobileLink
-                    key={item.href}
-                    href={item.href}
-                    onOpenChange={setOpen}
-                  >
-                    {item.title}
-                  </MobileLink>
-                )
-            )}
-          </div>
           <div className="flex flex-col space-y-2">
             {sidebarNav.map((item) => (
               <div key={item.title} className="space-y-2">
