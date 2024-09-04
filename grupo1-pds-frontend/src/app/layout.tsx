@@ -17,8 +17,8 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body>
         {children}
-      </body>
         <Toaster />
+      </body>
     </html>
   );
 }
