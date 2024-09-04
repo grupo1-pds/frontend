@@ -29,6 +29,7 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form"
+import axiosInstance from "../../../../axiosConfig"
 
 const loginSchema = z.object({
   email: z.string().email({ message: "E-mail inválido" }),
@@ -40,6 +41,8 @@ const registerSchema = z.object({
   email: z.string().email({ message: "E-mail inválido" }),
   password: z.string().min(6, { message: "A senha deve ter pelo menos 6 caracteres" }),
   confirmPassword: z.string(),
+  age: z.number().int().positive(),
+  phone: z.string().min(10, { message: "O telefone deve ter pelo menos 10 caracteres" }),
 }).refine((data) => data.password === data.confirmPassword, {
   message: "As senhas não coincidem",
   path: ["confirmPassword"],
@@ -63,19 +66,28 @@ const LoginPage = () => {
       email: "",
       password: "",
       confirmPassword: "",
+      age: 0,
+      phone: "",
     },
   })
 
-  const onLoginSubmit = (values: z.infer<typeof loginSchema>) => {
-    console.log(values)
-    toast.success("Login efetuado com sucesso!")
-    router.push("/dashboard")
+  const onLoginSubmit = async (values: z.infer<typeof loginSchema>) => {
+    try {
+      const response = await axiosInstance.post('login' , values);
+      router.push("/dashboard");
+    } catch (error) {
+      toast.error("E-mail ou senha inválidos");
+    }
   }
 
-  const onRegisterSubmit = (values: z.infer<typeof registerSchema>) => {
-    console.log(values)
+  const onRegisterSubmit = async (values: z.infer<typeof registerSchema>) => {
     toast.success("Conta criada com sucesso!")
-    router.push("/dashboard")
+    try {
+      const response = await axiosInstance.post('signup', values);
+      router.push("/dashboard");
+    } catch (error) {
+      toast.error("Erro ao criar conta");
+    }
   }
 
   return (
@@ -160,6 +172,36 @@ const LoginPage = () => {
                     render={({ field }) => (
                       <FormItem>
                         <FormLabel>E-mail</FormLabel>
+                        <FormControl>
+                          <Input {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    control={registerForm.control}
+                    name="age"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Idade</FormLabel>
+                        <FormControl>
+                          <Input 
+                            type="number" 
+                            {...field} 
+                            onChange={(e) => field.onChange(parseInt(e.target.value, 10))}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    control={registerForm.control}
+                    name="phone"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Telefone</FormLabel>
                         <FormControl>
                           <Input {...field} />
                         </FormControl>
