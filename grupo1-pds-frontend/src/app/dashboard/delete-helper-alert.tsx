@@ -21,7 +21,7 @@ const DeleteHelperAlert = ({ helperId, helperName }: { helperId: string, helperN
     <AlertDialog>
       <AlertDialogTrigger asChild>
         <Button variant="outline" size="icon">
-          <Trash size={16} className='text-gray-900 hover:cursor-pointer hover:text-red-500' />
+          <Trash size={16} className='hover:cursor-pointer hover:text-red-500' />
         </Button>
       </AlertDialogTrigger>
       <AlertDialogContent>

@@ -4,6 +4,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
 import { Shield } from 'lucide-react';
+import { ThemeToggle } from "./theme-toggle";
 
 export function MainNav() {
   const pathname = usePathname()
@@ -26,6 +27,7 @@ export function MainNav() {
         >
           Login
         </Link>
+        <ThemeToggle />
       </nav>
     </div>
   )

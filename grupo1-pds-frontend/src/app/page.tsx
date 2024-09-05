@@ -38,15 +38,15 @@ export default function Home() {
       <main className="flex-1">
       <Section className="xl:py-48 bg-[#6A9C89] min-h-[100vh] flex items-center">
           <div className="container px-4 md:px-6">
-            <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
+            <div className="grid gap-5 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
-                  <h1 className="text-3xl font-bold tracking-tighter text-white sm:text-5xl xl:text-6xl/none">
+                  <h1 className="text-3xl font-bold tracking-tighter text-white sm:text-5xl xl:text-6xl/none mb-2">
                     <span className="text-[#FFF5E4]">SafeElder:</span> Cuidado e Segurança para Idosos
                   </h1>
-                  <p className="max-w-[600px] text-white md:text-xl">
+                  {/* <p className="max-w-[600px] text-white md:text-xl">
                     Com o <span className="font-semibold">SafeElder</span>, oferecemos uma plataforma abrangente de cuidados personalizados, monitoramento de segurança e assistência em emergências, trazendo tranquilidade para idosos e seus familiares.
-                  </p>
+                  </p> */}
                 </div>
 
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
@@ -67,11 +67,11 @@ export default function Home() {
                 </div>
               </div>
               <div className="flex items-center justify-center">
-                <img
+                {/* <img
                   src="/safeElder-hero.png"
                   alt="SafeElder - Cuidado e segurança para idosos"
                   className="w-full h-auto max-w-[400px] rounded-lg shadow-lg"
-                />
+                /> */}
               </div>
             </div>
           </div>
