@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Toaster } from "@/components/ui/sonner"
 import "./globals.css";
 import { SiteHeader } from "@/components/header/header";
+import { Providers } from "@/lib/providers";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,9 +17,11 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body>
+        <Providers>
         {children}
+        </Providers>
       </body>
-        <Toaster />
+      <Toaster />
     </html>
   );
 }

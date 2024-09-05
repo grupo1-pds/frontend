@@ -61,7 +61,7 @@ export function AddHelperButton() {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <Button variant="outline">
+        <Button variant="outline" className="bg-[#e48035] text-white hover:text-white hover:bg-[#e48035]/90">
           <Plus className="mr-2 h-4 w-4" />
           Adicionar Ajudante
         </Button>

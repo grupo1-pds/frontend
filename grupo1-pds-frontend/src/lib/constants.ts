@@ -143,6 +143,206 @@ export const sampleHelpers: Helper[] = [
     sms: true,
     phone: false,
     description: "Helen Patel is a helper"
+  },
+  {
+    id: "15",
+    name: "John Doe",
+    email: "john.doe@example.com",
+    avatarImage: "https://example.com/avatars/john-doe.jpg",
+    phoneNumber: "9876543210",
+    sms: true,
+    phone: true,
+    description: "John Doe is a caregiver"
+  },
+  {
+    id: "16",
+    name: "Jane Smith",
+    email: "jane.smith@example.com",
+    avatarImage: "https://example.com/avatars/jane-smith.jpg",
+    phoneNumber: "8765432109",
+    sms: false,
+    phone: true,
+    description: "Jane Smith is a nurse"
+  },
+  {
+    id: "17",
+    name: "Michael Johnson",
+    email: "michael.johnson@example.com",
+    avatarImage: "https://example.com/avatars/michael-johnson.jpg",
+    phoneNumber: "7654321098",
+    sms: true,
+    phone: false,
+    description: "Michael Johnson is a doctor"
+  },
+  {
+    id: "18",
+    name: "Emily Brown",
+    email: "emily.brown@example.com",
+    avatarImage: "https://example.com/avatars/emily-brown.jpg",
+    phoneNumber: "6543210987",
+    sms: true,
+    phone: true,
+    description: "Emily Brown is a social worker"
+  },
+  {
+    id: "19",
+    name: "David Wilson",
+    email: "david.wilson@example.com",
+    avatarImage: "https://example.com/avatars/david-wilson.jpg",
+    phoneNumber: "5432109876",
+    sms: false,
+    phone: false,
+    description: "David Wilson is a therapist"
+  },
+  {
+    id: "20",
+    name: "Sarah Taylor",
+    email: "sarah.taylor@example.com",
+    avatarImage: "https://example.com/avatars/sarah-taylor.jpg",
+    phoneNumber: "4321098765",
+    sms: true,
+    phone: true,
+    description: "Sarah Taylor is a nutritionist"
+  },
+  {
+    id: "21",
+    name: "Robert Anderson",
+    email: "robert.anderson@example.com",
+    avatarImage: "https://example.com/avatars/robert-anderson.jpg",
+    phoneNumber: "3210987654",
+    sms: true,
+    phone: false,
+    description: "Robert Anderson is a physical therapist"
+  },
+  {
+    id: "22",
+    name: "Lisa Martinez",
+    email: "lisa.martinez@example.com",
+    avatarImage: "https://example.com/avatars/lisa-martinez.jpg",
+    phoneNumber: "2109876543",
+    sms: false,
+    phone: true,
+    description: "Lisa Martinez is a psychologist"
+  },
+  {
+    id: "23",
+    name: "William Thomas",
+    email: "william.thomas@example.com",
+    avatarImage: "https://example.com/avatars/william-thomas.jpg",
+    phoneNumber: "1098765432",
+    sms: true,
+    phone: true,
+    description: "William Thomas is a geriatrician"
+  },
+  {
+    id: "24",
+    name: "Jennifer Garcia",
+    email: "jennifer.garcia@example.com",
+    avatarImage: "https://example.com/avatars/jennifer-garcia.jpg",
+    phoneNumber: "0987654321",
+    sms: true,
+    phone: false,
+    description: "Jennifer Garcia is an occupational therapist"
+  },
+  {
+    id: "25",
+    name: "Christopher Lee",
+    email: "christopher.lee@example.com",
+    avatarImage: "https://example.com/avatars/christopher-lee.jpg",
+    phoneNumber: "9876543210",
+    sms: false,
+    phone: true,
+    description: "Christopher Lee is a pharmacist"
+  },
+  {
+    id: "26",
+    name: "Amanda White",
+    email: "amanda.white@example.com",
+    avatarImage: "https://example.com/avatars/amanda-white.jpg",
+    phoneNumber: "8765432109",
+    sms: true,
+    phone: true,
+    description: "Amanda White is a dietitian"
+  },
+  {
+    id: "27",
+    name: "Daniel Harris",
+    email: "daniel.harris@example.com",
+    avatarImage: "https://example.com/avatars/daniel-harris.jpg",
+    phoneNumber: "7654321098",
+    sms: true,
+    phone: false,
+    description: "Daniel Harris is a respiratory therapist"
+  },
+  {
+    id: "28",
+    name: "Jessica Clark",
+    email: "jessica.clark@example.com",
+    avatarImage: "https://example.com/avatars/jessica-clark.jpg",
+    phoneNumber: "6543210987",
+    sms: false,
+    phone: true,
+    description: "Jessica Clark is a speech therapist"
+  },
+  {
+    id: "29",
+    name: "Matthew Lewis",
+    email: "matthew.lewis@example.com",
+    avatarImage: "https://example.com/avatars/matthew-lewis.jpg",
+    phoneNumber: "5432109876",
+    sms: true,
+    phone: true,
+    description: "Matthew Lewis is a case manager"
+  },
+  {
+    id: "30",
+    name: "Olivia Walker",
+    email: "olivia.walker@example.com",
+    avatarImage: "https://example.com/avatars/olivia-walker.jpg",
+    phoneNumber: "4321098765",
+    sms: true,
+    phone: false,
+    description: "Olivia Walker is a home health aide"
+  },
+  {
+    id: "31",
+    name: "Andrew Hall",
+    email: "andrew.hall@example.com",
+    avatarImage: "https://example.com/avatars/andrew-hall.jpg",
+    phoneNumber: "3210987654",
+    sms: false,
+    phone: true,
+    description: "Andrew Hall is a social services coordinator"
+  },
+  {
+    id: "32",
+    name: "Emma Young",
+    email: "emma.young@example.com",
+    avatarImage: "https://example.com/avatars/emma-young.jpg",
+    phoneNumber: "2109876543",
+    sms: true,
+    phone: true,
+    description: "Emma Young is a recreational therapist"
+  },
+  {
+    id: "33",
+    name: "Ryan King",
+    email: "ryan.king@example.com",
+    avatarImage: "https://example.com/avatars/ryan-king.jpg",
+    phoneNumber: "1098765432",
+    sms: true,
+    phone: false,
+    description: "Ryan King is a patient advocate"
+  },
+  {
+    id: "34",
+    name: "Sophia Scott",
+    email: "sophia.scott@example.com",
+    avatarImage: "https://example.com/avatars/sophia-scott.jpg",
+    phoneNumber: "0987654321",
+    sms: false,
+    phone: true,
+    description: "Sophia Scott is a care coordinator"
   }
 ];
 
