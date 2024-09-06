@@ -38,7 +38,7 @@ const formSchema = z.object({
 
 type FormValues = z.infer<typeof formSchema>
 
-export function AddHelperButton() {
+export function AddHelperModal() {
 
   const [open, setOpen] = useState(false)
   const form = useForm<FormValues>({
@@ -58,8 +58,13 @@ export function AddHelperButton() {
     form.reset()
   }
 
+  const handleCloseDialog = () => {
+    setOpen((open) => !open)
+    form.reset()
+  }
+
   return (
-    <Dialog open={open} onOpenChange={setOpen}>
+    <Dialog open={open} onOpenChange={handleCloseDialog}>
       <DialogTrigger asChild>
         <Button variant="outline" className="bg-[#e48035] text-white hover:text-white hover:bg-[#e48035]/90">
           <Plus className="mr-2 h-4 w-4" />

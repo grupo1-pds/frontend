@@ -20,7 +20,9 @@ export function MessageSentAlert(
     <AlertCircle className="h-4 w-4" />
     <AlertTitle>Error</AlertTitle>
     <AlertDescription>
-      Your session has expired. Please log in again.
+      {messageSent.messageStatus.status === "delivered" ? "Mensagem enviada com sucesso" :
+      messageSent.messageStatus.status === "pending" ? "Mensagem pendente" :
+      "Erro ao enviar mensagem"}
     </AlertDescription>
   </Alert>
   )

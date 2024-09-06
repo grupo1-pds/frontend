@@ -1,7 +1,13 @@
 import type { Helper, MessageSent } from "./type";
 
 
-
+export const sampleConnectedDevices = [
+  "Camera 1 (Cozinha)",
+  "Camera 2 (Sala)",
+  "Camera 3 (Quarto)",
+  "Camera 4 (Banheiro)",
+  "Camera 5 (Garagem)",
+];
 
 export const sampleHelpers: Helper[] = [
   {

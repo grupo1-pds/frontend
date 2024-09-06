@@ -5,4 +5,11 @@ export const deleteHelper = async (helperId: string) => {
   // })
 }
 
+export const deleteDevice = async (deviceId: string) => {
+  console.log(deviceId)
+  // await fetch(`http://localhost:3000/devices/${deviceId}`, {
+  //   method: 'DELETE'
+  // })
+}
+
 export default deleteHelper
